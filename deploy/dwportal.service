@@ -1,0 +1,20 @@
+[Unit]
+Description=dwPortal home-lab service index
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=dwportal
+Group=dwportal
+ExecStart=/opt/dwportal/current/dwportal
+Environment=DWPORTAL_CATALOG=/var/lib/dwportal/catalog.yaml
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/var/lib/dwportal
+
+[Install]
+WantedBy=multi-user.target

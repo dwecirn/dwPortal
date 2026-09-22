@@ -1,0 +1,16 @@
+schema_version: 1
+base_domain: dw.c
+listen_port: 6480
+services:
+  - id: forgejo
+    name: Forgejo
+    description: Git repositories and code review
+    group: Development
+    domain: git.dw.c
+    port: 3000
+  - id: matrix
+    name: Matrix
+    description: Private messaging
+    group: Communication
+    domain: matrix.dw.c
+    port: 8008

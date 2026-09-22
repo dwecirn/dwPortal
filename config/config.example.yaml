@@ -1,0 +1,8 @@
+schema_version: 1
+base_domain: dw.c
+listen_port: 6480
+services:
+  - id: example
+    name: Example
+    domain: example.dw.c
+    port: 8081
